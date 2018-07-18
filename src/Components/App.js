@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 class App extends Component {
+  state = {
+    searchInput: {},
+    changeInput: {}
+  };
+
+  myInput = React.createRef();
+
+  submitHandler = e => {
+    console.log(this.myInput);
+  };
+
   render() {
     return (
       <div className="App">
-        <div>Job Tracker</div>
+        <form onSubmit={this.submitHandler}>
+          <input type="text" ref={this.myInput} placeholder="Placeholder" />
+        </form>
+        <button type="submit">Submit</button>
       </div>
     );
   }
