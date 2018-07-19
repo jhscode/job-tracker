@@ -11,7 +11,7 @@ class App extends Component {
     // 1. Stop page from submitting
     e.preventDefault();
     // 2. Get text from input
-    console.log(this.myInput.current.value);
+    const searchInput = this.myInput.current.value;
   };
 
   render() {
