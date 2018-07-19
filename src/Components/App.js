@@ -2,23 +2,25 @@ import React, { Component } from 'react';
 
 class App extends Component {
   state = {
-    searchInput: {},
-    changeInput: {}
+    searchInput: {}
   };
 
   myInput = React.createRef();
 
   submitHandler = e => {
-    console.log(this.myInput);
+    // 1. Stop page from submitting
+    e.preventDefault();
+    // 2. Get text from input
+    console.log(this.myInput.current.value);
   };
 
   render() {
     return (
       <div className="App">
         <form onSubmit={this.submitHandler}>
-          <input type="text" ref={this.myInput} placeholder="Placeholder" />
+          <input type="text" ref={this.myInput} placeholder="Search" />
+          <button type="submit">Submit</button>
         </form>
-        <button type="submit">Submit</button>
       </div>
     );
   }
