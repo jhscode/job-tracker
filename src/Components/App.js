@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AddJob searchInput={this.searchInput} />
+        <AddJob searchInput={this.state.searchInput} />
         <ListJob />
       </div>
     );

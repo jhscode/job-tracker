@@ -14,7 +14,7 @@ class AddJob extends React.Component {
     return (
       <form onSubmit={this.submitHandler}>
         <input type="text" ref={this.myInput} placeholder="Search" />
-        <button type="submit">Submit</button>
+        <button type="submit">Add New Job</button>
       </form>
     );
   }
