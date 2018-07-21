@@ -21,6 +21,8 @@ class CreateJob extends React.Component {
       date: this.dateRef.current.value
     };
     this.props.addJob(job);
+    // Reset form
+    e.currentTarget.reset();
   };
 
   render() {

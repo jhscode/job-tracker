@@ -7,7 +7,14 @@ class App extends Component {
     jobs: {}
   };
   addJob = job => {
-    console.log('adding a job');
+    // Create a copy of the existing state
+    const jobs = { ...this.state.jobs };
+    // Add new job to that jobs variable
+    jobs[`job${Date.now()}`] = job;
+    // Set to state
+    this.setState({
+      jobs: jobs
+    });
   };
 
   render() {
