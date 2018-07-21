@@ -1,6 +1,6 @@
 import React from 'react';
 
-class AddJob extends React.Component {
+class CreateJob extends React.Component {
   nameRef = React.createRef();
   descRef = React.createRef();
   sentRef = React.createRef();
@@ -8,7 +8,7 @@ class AddJob extends React.Component {
   sourceRef = React.createRef();
   dateRef = React.createRef();
 
-  addJob = e => {
+  createJob = e => {
     // 1. Stop page from submitting
     e.preventDefault();
     // 2. Get text from inputs
@@ -20,12 +20,12 @@ class AddJob extends React.Component {
       source: this.sourceRef.current.value,
       date: this.dateRef.current.value
     };
-    console.log(job);
+    this.props.addJob(job);
   };
 
   render() {
     return (
-      <form onSubmit={this.addJob}>
+      <form onSubmit={this.createJob}>
         <input
           name="name"
           ref={this.nameRef}
@@ -58,4 +58,4 @@ class AddJob extends React.Component {
   }
 }
 
-export default AddJob;
+export default CreateJob;

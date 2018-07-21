@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import ListJob from './ListJob';
-import AddJob from './AddJob';
+import CreateJob from './CreateJob';
 
 class App extends Component {
   state = {
     jobs: {}
   };
+  addJob = job => {
+    console.log('adding a job');
+  };
 
   render() {
     return (
       <div className="App">
-        <AddJob searchInput={this.state.jobs} />
+        <CreateJob addJob={this.addJob} />
         <ListJob />
       </div>
     );
