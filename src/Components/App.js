@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ListJob from './ListJob';
+import Job from './Job';
 import CreateJob from './CreateJob';
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <CreateJob addJob={this.addJob} />
-        <ListJob />
+        <Job />
       </div>
     );
   }
