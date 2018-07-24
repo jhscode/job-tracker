@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
 import Job from './Job';
 import CreateJob from './CreateJob';
+import ListJobs from './ListJobs';
 
 class App extends Component {
   state = {
     jobs: {}
+  };
+  // componentDidMount() {
+  //   this.ref = base.syncState('/', {
+  //     context: this,
+  //     state: 'jobs'
+  //   });
+  // }
+
+  deleteJob = job => {
+    console.log('deleting job');
   };
 
   addJob = job => {
@@ -22,11 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <CreateJob addJob={this.addJob} />
-        <ul>
-          {Object.keys(this.state.jobs).map(key => (
-            <Job key={key} details={this.state.jobs[key]} />
-          ))}
-        </ul>
+        <ListJobs jobs={this.state.jobs} />
       </div>
     );
   }
