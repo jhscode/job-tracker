@@ -6,6 +6,13 @@ class App extends Component {
   state = {
     jobs: {}
   };
+  componentDidMount() {
+    this.ref = base.syncState('/', {
+      context: this,
+      state: 'jobs'
+    });
+  }
+
   addJob = job => {
     // Create a copy of the existing state
     const jobs = { ...this.state.jobs };
@@ -21,7 +28,11 @@ class App extends Component {
     return (
       <div className="App">
         <CreateJob addJob={this.addJob} />
-        <Job />
+        <ul>
+          {Object.keys(this.state.jobs).map(key => (
+            <Job key={key} details={this.state.jobs[key]} />
+          ))}
+        </ul>
       </div>
     );
   }
