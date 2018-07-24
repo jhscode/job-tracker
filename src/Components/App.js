@@ -6,12 +6,6 @@ class App extends Component {
   state = {
     jobs: {}
   };
-  componentDidMount() {
-    this.ref = base.syncState('/', {
-      context: this,
-      state: 'jobs'
-    });
-  }
 
   addJob = job => {
     // Create a copy of the existing state
