@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import Job from './Job';
 import CreateJob from './CreateJob';
 import ListJobs from './ListJobs';
+import base from '../base';
 
 class App extends Component {
   state = {
     jobs: {}
   };
-  // componentDidMount() {
-  //   this.ref = base.syncState('/', {
-  //     context: this,
-  //     state: 'jobs'
-  //   });
-  // }
+
+  componentWillMount() {
+    this.ref = base.syncState('jobs', {
+      context: this,
+      state: 'jobs'
+    });
+  }
 
   deleteJob = job => {
     console.log('deleting job');
