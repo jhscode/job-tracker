@@ -34,7 +34,7 @@ class CreateJobForm extends React.Component {
           type="text"
           placeholder="Company Name"
         />
-        <input
+        <textarea
           name="desc"
           ref={this.descRef}
           type="text"
@@ -42,10 +42,10 @@ class CreateJobForm extends React.Component {
         />
         <input name="sent" ref={this.sentRef} type="checkbox" />
         <input
-          name="title"
+          name="sent"
           type="text"
           ref={this.titleRef}
-          placeholder="Title"
+          placeholder="Sent?"
         />
         <input
           name="source"

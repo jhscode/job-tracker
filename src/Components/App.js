@@ -16,8 +16,14 @@ class App extends Component {
     });
   }
 
-  deleteJob = job => {
-    console.log('deleting job');
+  componentWillUnMount() {
+    base.removeBinding(this.ref);
+  }
+
+  deleteJob = key => {
+    const jobs = { ...this.state.jobs };
+    jobs[key] = null;
+    this.setState({ jobs: jobs });
   };
 
   addJob = job => {
