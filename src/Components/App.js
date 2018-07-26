@@ -41,7 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         <CreateJob addJob={this.addJob} />
-        <ListJobs jobs={this.state.jobs} />
+        <ListJobs jobs={this.state.jobs} deleteJob={this.deleteJob} />
       </div>
     );
   }

@@ -8,7 +8,12 @@ class ListJobs extends React.Component {
         <h3>List of the Jobs you applied:</h3>
         <ul>
           {Object.keys(this.props.jobs).map(key => (
-            <Job key={key} details={this.props.jobs[key]} />
+            <Job
+              key={key}
+              index={key}
+              details={this.props.jobs[key]}
+              deleteJob={this.props.deleteJob}
+            />
           ))}
         </ul>
       </Fragment>
