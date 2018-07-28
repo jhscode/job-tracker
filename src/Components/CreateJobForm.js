@@ -34,18 +34,17 @@ class CreateJobForm extends React.Component {
           type="text"
           placeholder="Company Name"
         />
-        <textarea
-          name="desc"
+        <input
+          name="title"
           ref={this.descRef}
           type="text"
-          placeholder="Description"
+          placeholder="Title"
         />
-        <input name="sent" ref={this.sentRef} type="checkbox" />
-        <input
-          name="sent"
+        <textarea
+          name="desc"
           type="text"
           ref={this.titleRef}
-          placeholder="Sent?"
+          placeholder="Description"
         />
         <input
           name="source"
