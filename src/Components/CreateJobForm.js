@@ -27,7 +27,7 @@ class CreateJobForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.createJob}>
+      <form className="job-edit" onSubmit={this.createJob}>
         <input
           name="name"
           ref={this.nameRef}

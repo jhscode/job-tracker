@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Job from './Job';
 import CreateJob from './CreateJob';
 import ListJobs from './ListJobs';
+import FavoriteJob from './FavoriteJob';
 import base from '../base';
 
 class App extends Component {
@@ -42,6 +43,7 @@ class App extends Component {
       <div className="App">
         <CreateJob addJob={this.addJob} />
         <ListJobs jobs={this.state.jobs} deleteJob={this.deleteJob} />
+        <FavoriteJob />
       </div>
     );
   }
