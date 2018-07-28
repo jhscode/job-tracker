@@ -2,9 +2,8 @@ import React from 'react';
 
 class CreateJobForm extends React.Component {
   nameRef = React.createRef();
-  descRef = React.createRef();
-  sentRef = React.createRef();
   titleRef = React.createRef();
+  descRef = React.createRef();
   sourceRef = React.createRef();
   dateRef = React.createRef();
 
@@ -14,9 +13,8 @@ class CreateJobForm extends React.Component {
     // 2. Get text from inputs
     const job = {
       name: this.nameRef.current.value,
-      desc: this.descRef.current.value,
-      sent: this.sentRef.current.value,
       title: this.titleRef.current.value,
+      desc: this.descRef.current.value,
       source: this.sourceRef.current.value,
       date: this.dateRef.current.value
     };
