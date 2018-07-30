@@ -5,8 +5,7 @@ import base from '../base';
 
 class App extends Component {
   state = {
-    jobs: {},
-    favoriteJobs: {}
+    jobs: {}
   };
 
   componentDidMount() {
