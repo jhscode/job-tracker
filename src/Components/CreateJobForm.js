@@ -34,14 +34,14 @@ class CreateJobForm extends React.Component {
         />
         <input
           name="title"
-          ref={this.descRef}
+          ref={this.titleRef}
           type="text"
           placeholder="Title"
         />
         <textarea
           name="desc"
           type="text"
-          ref={this.titleRef}
+          ref={this.descRef}
           placeholder="Description"
         />
         <input

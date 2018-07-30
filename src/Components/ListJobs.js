@@ -13,6 +13,7 @@ class ListJobs extends React.Component {
               index={key}
               details={this.props.jobs[key]}
               deleteJob={this.props.deleteJob}
+              addToFavorites={this.props.addToFavorites}
             />
           ))}
         </ul>
