@@ -50,7 +50,7 @@ class CreateJobForm extends React.Component {
           ref={this.sourceRef}
           placeholder="Source"
         />
-        <input name="date" type="text" ref={this.dateRef} placeholder="Date" />
+        <input name="date" type="date" ref={this.dateRef} placeholder="Date" />
         <button type="submit">Add New Job</button>
       </form>
     );
