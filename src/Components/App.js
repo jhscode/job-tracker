@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import CreateJob from './CreateJob';
 import ListJobs from './ListJobs';
+import Header from './Header';
 import base from '../base';
 
 class App extends Component {
   state = {
-    jobs: {}
+    jobs: {},
+    favoriteJobs: []
   };
 
   componentDidMount() {
@@ -38,7 +40,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
+        <Header />
         <CreateJob addJob={this.addJob} />
         <ListJobs jobs={this.state.jobs} deleteJob={this.deleteJob} />
       </div>
