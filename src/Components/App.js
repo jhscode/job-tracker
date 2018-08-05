@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import CreateJob from './CreateJob';
 import ListJobs from './ListJobs';
+import FavoriteJobsList from './FavoriteJobsList';
 import Header from './Header';
 import base from '../base';
 
 class App extends Component {
   state = {
-    jobs: {},
-    favoriteJobs: []
+    jobs: {}
   };
 
   componentDidMount() {
@@ -38,12 +38,31 @@ class App extends Component {
     });
   };
 
+  addToFavorites = key => {
+    const jobs = { ...this.state.jobs };
+    jobs[key].filter = !this.state.jobs[key].filter;
+    this.setState({
+      jobs: jobs
+    });
+  };
+
   render() {
     return (
       <div className="app">
         <Header />
         <CreateJob addJob={this.addJob} />
-        <ListJobs jobs={this.state.jobs} deleteJob={this.deleteJob} />
+        <ListJobs
+          jobs={this.state.jobs}
+          deleteJob={this.deleteJob}
+          favoriteJobs={this.state.favoriteJobs}
+          addToFavorites={this.addToFavorites}
+        />
+        <FavoriteJobsList
+          jobs={this.state.jobs}
+          deleteJob={this.deleteJob}
+          favoriteJobs={this.state.favoriteJobs}
+          addToFavorites={this.addToFavorites}
+        />
       </div>
     );
   }

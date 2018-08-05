@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-class Job extends React.Component {
+class FavoriteJob extends React.Component {
   render() {
     const { name, desc, title, source, date, filter } = this.props.details;
     return (
       <div>
-        {!filter && (
+        {filter && (
           <li>
             Name: {name}
             Desc: {desc}
@@ -15,14 +15,14 @@ class Job extends React.Component {
           </li>
         )}
         <div>
-          {!filter && (
+          {filter && (
             <button onClick={() => this.props.deleteJob(this.props.index)}>
               Delete
             </button>
           )}
-          {!filter && (
+          {filter && (
             <button onClick={() => this.props.addToFavorites(this.props.index)}>
-              Add To Favorites
+              Remove From Favorites
             </button>
           )}
         </div>
@@ -31,4 +31,4 @@ class Job extends React.Component {
   }
 }
 
-export default Job;
+export default FavoriteJob;

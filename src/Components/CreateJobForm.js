@@ -16,7 +16,8 @@ class CreateJobForm extends React.Component {
       title: this.titleRef.current.value,
       desc: this.descRef.current.value,
       source: this.sourceRef.current.value,
-      date: this.dateRef.current.value
+      date: this.dateRef.current.value,
+      filter: false
     };
     this.props.addJob(job);
     // Reset form
