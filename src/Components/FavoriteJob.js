@@ -7,7 +7,9 @@ class FavoriteJob extends React.Component {
       <div>
         {filter && (
           <li>
-            Name: {name}
+            <span>
+              <div>Name: {name} </div>
+            </span>
             Desc: {desc}
             Title: {title}
             Source: {source}

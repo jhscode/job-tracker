@@ -3,6 +3,7 @@ import CreateJob from './CreateJob';
 import ListJobs from './ListJobs';
 import FavoriteJobsList from './FavoriteJobsList';
 import Header from './Header';
+import Footer from './Footer';
 import base from '../base';
 
 class App extends Component {
@@ -63,6 +64,7 @@ class App extends Component {
           favoriteJobs={this.state.favoriteJobs}
           addToFavorites={this.addToFavorites}
         />
+        <Footer />
       </div>
     );
   }
