@@ -26,34 +26,40 @@ class CreateJobForm extends React.Component {
 
   render() {
     return (
-      <form className="job-edit" onSubmit={this.createJob}>
-        <input
-          name="name"
-          ref={this.nameRef}
-          type="text"
-          placeholder="Company Name"
-        />
-        <input
-          name="title"
-          ref={this.titleRef}
-          type="text"
-          placeholder="Title"
-        />
-        <textarea
-          name="desc"
-          type="text"
-          ref={this.descRef}
-          placeholder="Description"
-        />
-        <input
-          name="source"
-          type="text"
-          ref={this.sourceRef}
-          placeholder="Source"
-        />
-        <input name="date" type="date" ref={this.dateRef} placeholder="Date" />
-        <button type="submit">Add New Job</button>
-      </form>
+      <div className="createJobForm">
+        <form className="createJobForm" onSubmit={this.createJob}>
+          <input
+            className="createJobForm__inputs"
+            name="name"
+            ref={this.nameRef}
+            type="text"
+            placeholder="Company Name"
+          />
+          <input
+            className="createJobForm__inputs"
+            name="title"
+            ref={this.titleRef}
+            type="text"
+            placeholder="Title"
+          />
+          <textarea
+            className="createJobForm__inputs"
+            name="desc"
+            type="text"
+            ref={this.descRef}
+            placeholder="Description"
+          />
+          <input
+            className="createJobForm__inputs"
+            name="source"
+            type="text"
+            ref={this.sourceRef}
+            placeholder="Source"
+          />
+          <input name="date" type="date" ref={this.dateRef} placeholder="Date" />
+          <button className="createJobForm__btn"type="submit">Add New Job</button>
+        </form>
+      </div>
     );
   }
 }

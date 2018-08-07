@@ -51,20 +51,26 @@ class App extends Component {
     return (
       <div className="app">
         <Header />
-        <CreateJob addJob={this.addJob} />
-        <ListJobs
-          jobs={this.state.jobs}
-          deleteJob={this.deleteJob}
-          favoriteJobs={this.state.favoriteJobs}
-          addToFavorites={this.addToFavorites}
-        />
-        <FavoriteJobsList
-          jobs={this.state.jobs}
-          deleteJob={this.deleteJob}
-          favoriteJobs={this.state.favoriteJobs}
-          addToFavorites={this.addToFavorites}
-        />
-        <Footer />
+          <div className="app__createJob"><CreateJob addJob={this.addJob} /></div>
+          <div className="app__listJobs">
+            <ListJobs
+              jobs={this.state.jobs}
+              deleteJob={this.deleteJob}
+              favoriteJobs={this.state.favoriteJobs}
+              addToFavorites={this.addToFavorites}
+            />
+          </div>
+          <div className="app__favoriteJobsList">
+            <FavoriteJobsList
+              jobs={this.state.jobs}
+              deleteJob={this.deleteJob}
+              favoriteJobs={this.state.favoriteJobs}
+              addToFavorites={this.addToFavorites}
+            />
+          </div>
+          <div className="app__footer">
+            <Footer />
+          </div>
       </div>
     );
   }

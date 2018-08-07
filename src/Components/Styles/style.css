@@ -1,13 +1,33 @@
-.header-row {
-  max-width: 1140px;
-  margin: 0, auto;
-  color: purple;
+.flex {
+  display: flex;
+  flex-direction: row; 
 }
 
+/* Header */
+
 .header {
-  text-align: center;
-  font-size: 40px;
+  background-color: #1da1af;
+  text-transform: uppercase;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 300;
 }
+.header__wrapper {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header__title {
+  color: white;
+  margin: 0 auto;
+  padding: 25px 0;
+  font-size: 5.2rem;
+  font-weight: 400;
+  letter-spacing: 7px;
+}
+
+
 
 .wrapper.footer {
   justify-content: center;
