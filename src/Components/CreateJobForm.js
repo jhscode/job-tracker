@@ -26,8 +26,8 @@ class CreateJobForm extends React.Component {
 
   render() {
     return (
-      <div className="createJobForm">
-        <form className="createJobForm" onSubmit={this.createJob}>
+      <div className="createJobForm__wrapper">
+        <form className="createJobForm__form" onSubmit={this.createJob}>
           <input
             className="createJobForm__inputs"
             name="name"
@@ -42,13 +42,6 @@ class CreateJobForm extends React.Component {
             type="text"
             placeholder="Title"
           />
-          <textarea
-            className="createJobForm__inputs"
-            name="desc"
-            type="text"
-            ref={this.descRef}
-            placeholder="Description"
-          />
           <input
             className="createJobForm__inputs"
             name="source"
@@ -57,6 +50,13 @@ class CreateJobForm extends React.Component {
             placeholder="Source"
           />
           <input name="date" type="date" ref={this.dateRef} placeholder="Date" />
+          <textarea
+            className="createJobForm__inputs"
+            name="desc"
+            type="text"
+            ref={this.descRef}
+            placeholder="Description"
+          />
           <button className="createJobForm__btn"type="submit">Add New Job</button>
         </form>
       </div>

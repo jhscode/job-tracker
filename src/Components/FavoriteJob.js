@@ -7,26 +7,26 @@ class FavoriteJob extends React.Component {
       <div className="favoriteJob">
         <div className="favoriteJob__wrapper">
           {filter && (
-            <div>
+            <div className="favoriteJob__list">
               <li>
                 <span>
-                  Name: {name}
-                  Desc: {desc}
-                  Title: {title}
-                  Source: {source}
-                  Date: {date}
+                  <ul className="favoriteJob__name">Name: {name}</ul>
+                  <ul className="favoriteJob__title">Title: {title}</ul>
+                  <ul className="favoriteJob__source">Source: {source}</ul>
+                  <ul className="favoriteJob__date">Date: {date}</ul>
+                  <ul className="favoriteJob__desc">Desc: {desc}</ul>
                 </span>
               </li>
             </div>
           )}
           <div>
             {filter && (
-              <button onClick={() => this.props.deleteJob(this.props.index)}>
+              <button className="deleteJob__btn" onClick={() => this.props.deleteJob(this.props.index)}>
                 Delete
               </button>
             )}
             {filter && (
-              <button onClick={() => this.props.addToFavorites(this.props.index)}>
+              <button className="removeFromFavorite__btn" onClick={() => this.props.addToFavorites(this.props.index)}>
                 Remove From Favorites
               </button>
             )}

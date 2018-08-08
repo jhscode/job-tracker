@@ -4,24 +4,25 @@ class Job extends React.Component {
   render() {
     const { name, desc, title, source, date, filter } = this.props.details;
     return (
-      <div>
+      <div className="job__wrapper">
         {!filter && (
-          <li>
-            Name: {name}
-            Desc: {desc}
-            Title: {title}
-            Source: {source}
-            Date: {date}
+          <li className="job__list">
+            <ul className="job__name">Name: {name}</ul>
+            <ul className="job__title">Title: {title}</ul>
+            <ul className="job__source">Source: {source}</ul>
+            <ul className="job__date">Date: {date}</ul>
+            <ul className="job__desc">Desc: {desc}</ul>
+
           </li>
         )}
         <div>
           {!filter && (
-            <button onClick={() => this.props.deleteJob(this.props.index)}>
+            <button className="deleteJob__btn" onClick={() => this.props.deleteJob(this.props.index)}>
               Delete
             </button>
           )}
           {!filter && (
-            <button onClick={() => this.props.addToFavorites(this.props.index)}>
+            <button className="addToFavorite__btn" onClick={() => this.props.addToFavorites(this.props.index)}>
               Add To Favorites
             </button>
           )}

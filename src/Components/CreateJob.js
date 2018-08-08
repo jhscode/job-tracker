@@ -4,8 +4,10 @@ import CreateJobForm from './CreateJobForm';
 const CreateJob = props => {
   return (
     <Fragment>
-      <h3 className="createJob-header">Type in your Job details here!</h3>
-      <CreateJobForm addJob={props.addJob} />
+      <div className="createJob__wrapper">
+        <h3 className="createJob__header">Type in your Job details here!</h3>
+        <CreateJobForm addJob={props.addJob} />
+      </div>
     </Fragment>
   );
 };
