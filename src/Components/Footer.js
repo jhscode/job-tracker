@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = props => {
   return (
-    <div className="wrapper footer">
+    <div className="footer__wrapper">
       <p>Made by James Shin</p>
     </div>
   );
