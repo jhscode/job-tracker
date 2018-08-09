@@ -31,8 +31,37 @@ ul{
   letter-spacing: 7px;
 }
 
+/* Create Job Form  */
+.createJobForm__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.createJobForm__inputs {
+  width: 100%;
+  margin-bottom: 10px;
+  flex: 0 1 auto;
+}
+
+.createJobForm__form {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Create Job */
+.createJob__wrapper {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.createJob__header {
+}
 
 
+ /* Footer */
 .footer__wrapper {
   justify-content: center;
   align-items: center;

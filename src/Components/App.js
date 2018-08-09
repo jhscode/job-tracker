@@ -50,7 +50,8 @@ class App extends Component {
   render() {
     return (
       <div className="app__wrapper">
-        <Header />
+        <header> <Header /> </header>
+        <main>
           <div className="app__createJob"><CreateJob addJob={this.addJob} /></div>
           <div className="app__listJobs">
             <ListJobs
@@ -68,9 +69,10 @@ class App extends Component {
               addToFavorites={this.addToFavorites}
             />
           </div>
-          <div className="app__footer">
+          </main>
+          <footer className="app__footer">
             <Footer />
-          </div>
+          </footer>
       </div>
     );
   }
