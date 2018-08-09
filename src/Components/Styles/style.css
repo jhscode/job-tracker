@@ -9,7 +9,7 @@ ul{
 
 /* Header */
 
-.header {
+.app__header {
   background-color: #1da1af;
   text-transform: uppercase;
   font-family: 'PT Sans', sans-serif;
@@ -20,6 +20,7 @@ ul{
   align-items: center;
   text-align: center;
   margin: 0 auto;
+  
 }
 
 .header__title {

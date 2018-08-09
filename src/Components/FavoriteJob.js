@@ -13,8 +13,8 @@ class FavoriteJob extends React.Component {
                   <ul className="favoriteJob__name">Name: {name}</ul>
                   <ul className="favoriteJob__title">Title: {title}</ul>
                   <ul className="favoriteJob__source">Source: {source}</ul>
-                  <ul className="favoriteJob__date">Date: {date}</ul>
                   <ul className="favoriteJob__desc">Desc: {desc}</ul>
+                  <ul className="favoriteJob__date">Date: {date}</ul>
                 </span>
               </li>
             </div>

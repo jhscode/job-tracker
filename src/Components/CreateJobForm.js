@@ -49,12 +49,6 @@ class CreateJobForm extends React.Component {
             ref={this.sourceRef}
             placeholder="Source"
           />
-          <input 
-            className="createJobForm__inputs"
-            name="date" 
-            type="text" 
-            ref={this.dateRef} 
-            placeholder="Date" />
           <textarea
             className="createJobForm__inputs"
             name="desc"
@@ -62,6 +56,13 @@ class CreateJobForm extends React.Component {
             ref={this.descRef}
             placeholder="Description"
           />
+          <input 
+            className="createJobForm__inputs"
+            name="date" 
+            type="text" 
+            ref={this.dateRef} 
+            placeholder="Date" />
+
           <button className="createJobForm__btn"type="submit">Add New Job</button>
         </form>
       </div>

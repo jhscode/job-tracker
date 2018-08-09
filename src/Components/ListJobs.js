@@ -4,7 +4,7 @@ import Job from './Job';
 class ListJobs extends React.Component {
   render() {
     return (
-      <Fragment>
+      <div className="listJobs__wrapper">
         <h3>List of the Jobs you applied:</h3>
         <ul>
           {Object.keys(this.props.jobs).map(key => (
@@ -17,7 +17,7 @@ class ListJobs extends React.Component {
             />
           ))}
         </ul>
-      </Fragment>
+      </div>
     );
   }
 }

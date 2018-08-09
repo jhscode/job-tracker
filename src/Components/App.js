@@ -23,8 +23,11 @@ class App extends Component {
   }
 
   deleteJob = key => {
+    // Create a copy of the existing state
     const jobs = { ...this.state.jobs };
+    // Delete job from database
     jobs[key] = null;
+    // Set state to new jobs
     this.setState({ jobs: jobs });
   };
 
@@ -36,6 +39,7 @@ class App extends Component {
     // Set to state
     this.setState({
       jobs: jobs
+    // can just be jobs
     });
   };
 
@@ -44,31 +48,30 @@ class App extends Component {
     jobs[key].filter = !this.state.jobs[key].filter;
     this.setState({
       jobs: jobs
+      // can just be jobs
     });
   };
 
   render() {
     return (
       <div className="app__wrapper">
-        <header> <Header /> </header>
-        <main>
-          <div className="app__createJob"><CreateJob addJob={this.addJob} /></div>
-          <div className="app__listJobs">
-            <ListJobs
-              jobs={this.state.jobs}
-              deleteJob={this.deleteJob}
-              favoriteJobs={this.state.favoriteJobs}
-              addToFavorites={this.addToFavorites}
-            />
-          </div>
-          <div className="app__favoriteJobsList">
-            <FavoriteJobsList
-              jobs={this.state.jobs}
-              deleteJob={this.deleteJob}
-              favoriteJobs={this.state.favoriteJobs}
-              addToFavorites={this.addToFavorites}
-            />
-          </div>
+        <header className="app__header"> 
+          <Header /> 
+        </header>
+        <main className="app__main">
+          <CreateJob addJob={this.addJob} />
+          <ListJobs
+            jobs={this.state.jobs}
+            deleteJob={this.deleteJob}
+            favoriteJobs={this.state.favoriteJobs}
+            addToFavorites={this.addToFavorites}
+          />
+          <FavoriteJobsList
+            jobs={this.state.jobs}
+            deleteJob={this.deleteJob}
+            favoriteJobs={this.state.favoriteJobs}
+            addToFavorites={this.addToFavorites}
+          />
           </main>
           <footer className="app__footer">
             <Footer />
