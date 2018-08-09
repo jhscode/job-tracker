@@ -58,7 +58,14 @@ ul{
   flex-direction: column;
 }
 
-.createJob__header {
+/* Favorite Jobs List */
+.favoriteJobsList__wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #1da1af;
+  text-transform: uppercase;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 300; 
 }
 
 

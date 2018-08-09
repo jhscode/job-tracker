@@ -4,19 +4,16 @@ class FavoriteJob extends React.Component {
   render() {
     const { name, desc, title, source, date, filter } = this.props.details;
     return (
-      <div className="favoriteJob">
         <div className="favoriteJob__wrapper">
           {filter && (
             <div className="favoriteJob__list">
-              <li>
-                <span>
-                  <ul className="favoriteJob__name">Name: {name}</ul>
-                  <ul className="favoriteJob__title">Title: {title}</ul>
-                  <ul className="favoriteJob__source">Source: {source}</ul>
-                  <ul className="favoriteJob__desc">Desc: {desc}</ul>
-                  <ul className="favoriteJob__date">Date: {date}</ul>
-                </span>
-              </li>
+              <ul>
+                  <li className="favoriteJob__name">Name: {name}</li>
+                  <li className="favoriteJob__title">Title: {title}</li>
+                  <li className="favoriteJob__source">Source: {source}</li>
+                  <li className="favoriteJob__desc">Desc: {desc}</li>
+                  <li className="favoriteJob__date">Date: {date}</li>
+              </ul>
             </div>
           )}
           <div>
@@ -31,7 +28,6 @@ class FavoriteJob extends React.Component {
               </button>
             )}
           </div>
-        </div>
       </div>
     );
   }
