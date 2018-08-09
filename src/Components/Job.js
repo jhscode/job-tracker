@@ -6,14 +6,13 @@ class Job extends React.Component {
     return (
       <div className="job__wrapper">
         {!filter && (
-          <li className="job__list">
-            <ul className="job__name">Name: {name}</ul>
-            <ul className="job__title">Title: {title}</ul>
-            <ul className="job__source">Source: {source}</ul>
-            <ul className="job__date">Date: {date}</ul>
-            <ul className="job__desc">Desc: {desc}</ul>
-
-          </li>
+          <div className="job__list">
+            <li className="job__name">Name: {name}</li>
+            <li className="job__title">Title: {title}</li>
+            <li className="job__source">Source: {source}</li>
+            <li className="job__date">Date: {date}</li>
+            <li className="job__desc">Desc: {desc}</li>
+          </div>
         )}
         <div>
           {!filter && (
