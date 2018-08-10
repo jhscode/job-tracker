@@ -4,7 +4,7 @@ class FavoriteJob extends React.Component {
   render() {
     const { name, desc, title, source, date, filter } = this.props.details;
     return (
-      <div className="favoriteJob__wrapper">
+      <div>
         {filter && (
           <div className="favoriteJob__list">
             <li className="favoriteJob__name">Name: {name}</li>

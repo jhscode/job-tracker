@@ -59,13 +59,17 @@ class App extends Component {
           <Header /> 
         </header>
         <main className="app__main">
+        <div className="app__createJob">
           <CreateJob addJob={this.addJob} />
+        </div>
+        <div className="app__listJobs">
           <ListJobs
             jobs={this.state.jobs}
             deleteJob={this.deleteJob}
             favoriteJobs={this.state.favoriteJobs}
             addToFavorites={this.addToFavorites}
           />
+        </div>
           <FavoriteJobsList
             jobs={this.state.jobs}
             deleteJob={this.deleteJob}
