@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 class FavoriteJob extends React.Component {
   render() {
     const { name, desc, title, source, date, filter } = this.props.details;
     return (
-      <div>
+      <Fragment>
         {filter && (
           <div className="favoriteJob__list">
             <li className="favoriteJob__name">Name: {name}</li>
@@ -26,7 +26,7 @@ class FavoriteJob extends React.Component {
             </button>
           )}
         </div>
-      </div>
+      </Fragment>
     );
   }
 }

@@ -62,7 +62,6 @@ class CreateJobForm extends React.Component {
             type="text" 
             ref={this.dateRef} 
             placeholder="Date" />
-
           <button className="createJobForm__btn"type="submit">Add New Job</button>
         </form>
       </div>
