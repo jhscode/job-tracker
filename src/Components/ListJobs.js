@@ -5,7 +5,7 @@ class ListJobs extends React.Component {
   render() {
     return (
       <div className="listJobs__wrapper">
-        <h3>List of the Jobs you applied:</h3>
+        <h3 className="listJobs__header">List of the Jobs you applied:</h3>
         <ul className="listJobs__list">
           {Object.keys(this.props.jobs).map(key => (
             <Job
