@@ -7,7 +7,7 @@ class FavoriteJobsList extends React.Component {
       <div className="favoriteJobsList__wrapper">
         <h3 className="favoriteJobsList__title">Favorite Jobs</h3>
         <div>
-        <ul className="favoriteJobList__list">
+        <ul className="favoriteJobsList__list">
           {Object.keys(this.props.jobs).map(key => (
             <FavoriteJob
               key={key}

@@ -14,7 +14,7 @@ class Job extends React.Component {
             <li className="job__desc">Desc: {desc}</li>
           </div>
         )}
-        <div>
+        <div className="job__btn">
           {!filter && (
             <button className="deleteJob__btn" onClick={() => this.props.deleteJob(this.props.index)}>
               Delete

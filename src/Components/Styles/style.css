@@ -51,6 +51,8 @@ ul {
   font-size: 4rem;
   margin: 0 auto;
   font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 /* Create Job Form  */
@@ -86,9 +88,9 @@ ul {
 /* List Jobs */
 .listJobs__wrapper {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  background: white;
+  background: rgb(207, 205, 205);
   padding: 10px 20px;
   width: 80%;
   margin: 20px auto;
@@ -100,6 +102,7 @@ ul {
   margin: 0 auto;
   font-family: 'PT Sans', sans-serif;
   font-weight: 100;
+  text-transform: uppercase;
 }
 
 .listJobs__list {
@@ -107,25 +110,29 @@ ul {
   list-style: none;
   font-size: 2.5rem;
   width: 100%;
-  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 /* Job List */
 .job__list {
   margin: 10px;
-  background-color: rgb(223, 223, 223);
-  width: 100%;
+  background-color: rgb(238, 237, 237);
   padding: 10px;
+}
+
+/* Job Button */
+.job__btn {
+  margin: 10px;
 }
 
 /* Favorite Jobs List */
 .favoriteJobsList__wrapper {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  background: white;
+  background: rgb(207, 205, 205);
   padding: 10px 20px;
   width: 80%;
   margin: 20px auto;
@@ -134,29 +141,27 @@ ul {
 
 .favoriteJobsList__title {
   font-size: 5rem;
-  margin: 10px 0;
+  margin: 0 auto;
   font-family: 'PT Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
-.favoriteJobList__list {
-  text-align: left;
-  font-size: 2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  background: white;
+.favoriteJobsList__list {
+  padding: 0;
+  list-style: none;
+  font-size: 2.5rem;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 auto;
 }
 
 /* Favorite Job */
-.favoriteJob_list {
-  justify-content: center;
-  text-align: left;
-  font-size: 2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  background: white;
-  margin: 0;
+.favoriteJob__list {
+  margin: 10px;
+  background-color: rgb(238, 237, 237);
+  padding: 10px;
 }
 
  /* Footer */
