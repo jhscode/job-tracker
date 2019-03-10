@@ -18,9 +18,9 @@ class App extends Component {
     });
   }
 
-  componentWillUnMount() {
-    base.removeBinding(this.ref);
-  }
+  // componentWillUnMount() {
+  //   base.removeBinding(this.ref);
+  // }
 
   deleteJob = key => {
     // Create a copy of the existing state
@@ -54,33 +54,23 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app__wrapper">
-        <header className="app__header"> 
-          <Header /> 
-        </header>
-        <main className="app__main">
-        <div className="app__createJob">
-          <CreateJob addJob={this.addJob} />
+      <div className="app__container">
+        <Header /> 
+        <CreateJob addJob={this.addJob} />
+        <ListJobs
+          jobs={this.state.jobs}
+          deleteJob={this.deleteJob}
+          favoriteJobs={this.state.favoriteJobs}
+          addToFavorites={this.addToFavorites}
+        />
+        <FavoriteJobsList
+          jobs={this.state.jobs}
+          deleteJob={this.deleteJob}
+          favoriteJobs={this.state.favoriteJobs}
+          addToFavorites={this.addToFavorites}
+        />
+        <Footer />
         </div>
-        <div className="app__listJobs">
-          <ListJobs
-            jobs={this.state.jobs}
-            deleteJob={this.deleteJob}
-            favoriteJobs={this.state.favoriteJobs}
-            addToFavorites={this.addToFavorites}
-          />
-        </div>
-          <FavoriteJobsList
-            jobs={this.state.jobs}
-            deleteJob={this.deleteJob}
-            favoriteJobs={this.state.favoriteJobs}
-            addToFavorites={this.addToFavorites}
-          />
-          </main>
-          <footer className="app__footer">
-            <Footer />
-          </footer>
-      </div>
     );
   }
 }
